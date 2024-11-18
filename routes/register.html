@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Online Voting System Registration</title>
+        <link rel="stylesheet" href="../css/stylesheet.css">
+    </head>
+
+    <body>
+
+        <style>
+            #address {
+                width: 52%;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+            #email{
+                width: 52%;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+
+            #imagepart {
+                text-align: center;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                width: 52%;
+                background-color: #f9f9f9;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+
+            #role {
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                width: 52%;
+                background-color: #f9f9f9;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+
+            #role select {
+                padding: 10px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+
+        </style>
+    <center>
+        <div id="headerSection">
+            <h1>Online Voting System</h1>
+        </div>  
+            <hr>
+
+            <div id="bodySection">
+                <h2>Registration</h2>
+                <form action="../api/register.php" method="POST" enctype="multipart/form-data">
+                    <input type="text" name="name" placeholder="Enter name" required>
+                    <input type="number" name="mobile" placeholder="Enter mobile" required><br><br>
+                    <input type="password" name="password" placeholder="Password" required>
+                    <input type="password" name="cpassword" placeholder="Confirm password" required><br><br>
+                    <input id="address" type="text" name="address" placeholder="Address" required><br><br>
+                    <input type="email" id="email" name="email" placeholder="Email Id" required><br><br>
+                    <div id="imagepart">
+                        Upload image: <input type="file" name="photo" title="Upload your image" required>
+                    </div>
+                <br>
+                <div id="role">
+                    Select your role: <select name="role" title="Select your role">
+                        <option value="1">Voter</option>
+                        <option value="2">Group</option>
+                    </select>
+                </div>
+                    <br>
+                    <button id="registerbtn">Register</button><br><br>
+                   Already user? <a href="../index.html">Login here</a>
+                </form>
+            </div>
+        </center>
+            </body>
+        
+        </html>
+
